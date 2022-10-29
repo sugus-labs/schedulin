@@ -35,8 +35,8 @@ users_lst = [
     ]
 
 reservations_lst = [
-    """INSERT INTO reservation (resource_id, user_id, start_time, num_pax, status, creation_date)
-           VALUES (1, 1, '09:00:00', 2, 'CONFIRMED', '{0}')""".format(now),
+    """INSERT INTO reservation (resource_id, user_id, start_time, num_pax, status, date, creation_date)
+           VALUES (1, 1, '09:00:00', 2, 'CONFIRMED', '2022-10-31', '{0}')""".format(now),
     ]
 
 inserts_lst = [timetables_lst, resources_lst,
