@@ -22,8 +22,8 @@ conn = db.connect()
 timetable_creation = """
     CREATE TABLE IF NOT EXISTS timetable (
         id INT AUTO_INCREMENT PRIMARY KEY,
-        start_time TIME,
-        end_time TIME,
+        start_time VARCHAR(20),
+        end_time VARCHAR(20),
         creation_date TIMESTAMP,
         modification_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         deletion_date TIMESTAMP
