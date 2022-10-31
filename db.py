@@ -1,4 +1,3 @@
-import pymysql
 from sqlalchemy import create_engine
 
 user = "automato"

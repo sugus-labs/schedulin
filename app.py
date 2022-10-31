@@ -6,7 +6,6 @@ from datetime import datetime
 from flask_restx import Api, Namespace, Resource, \
     reqparse, inputs, fields
 
-
 user = "automato"
 passw = "MySQLIsFun"
 host = "automato.mysql.pythonanywhere-services.com"
@@ -603,6 +602,3 @@ class find_reservation_by_day(Resource):
         result = connection.execute(select).fetchall()
         disconnect(connection)
         return jsonify({'result': [dict(row) for row in result]})
-
-
-
