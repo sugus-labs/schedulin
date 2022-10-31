@@ -108,6 +108,7 @@ users_lst = [
         .format(name[0], name[1], name[2], now) for name in names_lst
     ]
 
+<<<<<<< HEAD
 # USERS     - random.randint(8, 187)
 # RESOURCE  - random.randint(5, 19)
 # status    -
@@ -130,6 +131,12 @@ for num in range(4000):
             VALUES ({0}, {1}, NULL, {2}, '{3}', '{4}', '{5}')""" \
             .format(resource, user, num_pax, status, date, now),
     reservations_lst.append(reservations_str)
+=======
+reservations_lst = [
+    """INSERT INTO reservation (resource_id, user_id, start_time, num_pax, status, date, creation_date)
+           VALUES (1, 1, '09:00:00', 2, 'CONFIRMED', '2022-10-31', '{0}')""".format(now),
+    ]
+>>>>>>> c510a28ec5ed78cba857ffbb3fbd3277b9324052
 
 inserts_lst = [
     timetables_lst,
