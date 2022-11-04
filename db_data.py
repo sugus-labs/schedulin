@@ -118,13 +118,13 @@ users_lst = [
 
 status_lst = ["CONFIRMED", "CANCELLED", "EXECUTED"]
 reservations_lst = []
-for num in range(4000):
+for num in range(10000):
     resource = random.randint(5, 18)
     user = random.randint(8, 187)
-    num_pax = random.randint(1, 8)
+    num_pax = random.randint(1, 7)
     status = random.choices(status_lst,
-          weights = [65, 33, 2], k = 1)[0]
-    date = f.date_between(start_date = '-10y', end_date = '-8y')
+          weights = [95, 3, 2], k = 1)[0]
+    date = f.date_between(start_date = '-2y', end_date = 'now')
     reservations_str = """INSERT INTO reservation (resource_id, user_id, start_time, num_pax, status, date, creation_date)
             VALUES ({0}, {1}, NULL, {2}, '{3}', '{4}', '{5}')""" \
             .format(resource, user, num_pax, status, date, now),
@@ -136,16 +136,16 @@ for num in range(4000):
 #    ]
 
 inserts_lst = [
-    timetables_lst,
-    resources_lst,
-    users_lst,
+#    timetables_lst,
+#    resources_lst,
+#    users_lst,
     reservations_lst
 ]
 
 for lst in inserts_lst:
     for t in lst:
         #print(t[0])
-        conn.execute(t)
+        conn.execute(t[0])
 
 conn.close()
 

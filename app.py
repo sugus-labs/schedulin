@@ -17,12 +17,12 @@ app.config["SQLALCHEMY_DATABASE_URI"] = host
 app.config["SQLALCHEMY_DATABASE_URI"] = host
 
 api = Api(app, version = '1.0',
-    title = 'The famous automato API',
+    title = 'The famous SCHEDULIN API',
     description = """
-        The automato API is an API to manage reservations
+        The SCHEDULIN API is an API to manage reservations
         inside a neighborhood community.""",
     contact = "gustavo.martinvela@opendeusto.es",
-    endpoint = "/api/v1"
+    endpoint = "/schedulin/api/v1"
 )
 
 user_model = api.model(
@@ -91,7 +91,7 @@ class bye_swagger(Resource):
 
 users = Namespace('users',
     description = 'All operations related to users',
-    path='/api/v1')
+    path='/schedulin/api/v1')
 api.add_namespace(users)
 
 @users.route("/users")
@@ -194,7 +194,7 @@ class select_user(Resource):
 
 timetables = Namespace('timetables',
     description = 'All operations related to timetables',
-    path='/api/v1')
+    path='/schedulin/api/v1')
 api.add_namespace(timetables)
 
 @timetables.route("/timetables")
@@ -298,7 +298,7 @@ class select_timetable(Resource):
 
 resources = Namespace('resources',
     description = 'All operations related to resources',
-    path='/api/v1')
+    path='/schedulin/api/v1')
 api.add_namespace(resources)
 
 @resources.route("/resources")
@@ -447,7 +447,7 @@ class select_resource(Resource):
 
 reservations = Namespace('reservations',
     description = 'All operations related to reservations',
-    path='/api/v1')
+    path='/schedulin/api/v1')
 api.add_namespace(reservations)
 
 @reservations.route("/reservations")
