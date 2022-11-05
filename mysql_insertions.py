@@ -150,13 +150,13 @@ for key, lst in inserts_dict.items():
 
 status_lst = ["CONFIRMED", "CANCELLED", "EXECUTED"]
 reservations_lst = []
-for num in tqdm(range(3000)):
+for num in tqdm(range(20000)):
     resource = random.randint(1, 14)
     user = random.randint(1, 380)
-    num_pax = random.randint(1, 7)
+    num_pax = random.randint(1, 6)
     status = random.choices(status_lst,
-          weights = [95, 3, 2], k = 1)[0]
-    date = f.date_between(start_date = '-2y', end_date = 'now')
+          weights = [91, 7, 2], k = 1)[0]
+    date = f.date_between(start_date = '-4y', end_date = 'now')
 #    start_time = conn.execute("""
 #        SELECT start_time
 #        FROM (

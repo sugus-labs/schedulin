@@ -1,0 +1,31 @@
+--SELECT
+--    r.id AS reservation_id,
+--    r.date AS reservation_date,
+--    r.status AS reservation_status,
+--    u.name AS user_name,
+--    u.email AS user_email,
+--    re.type AS resource_type,
+--    re.price AS price,
+--    t.start_time,
+--    t.end_time
+--FROM (
+--    SELECT id, date, status, user_id, resource_id
+--    FROM reservation) AS r
+--LEFT JOIN (
+--    SELECT id, name, email
+--    FROM user) AS u
+--ON r.user_id = u.id
+--LEFT JOIN (
+--    SELECT id, type, price, timetable_id
+--    FROM resource) AS re
+--ON r.resource_id = re.id
+--LEFT JOIN (
+--    SELECT id, start_time, end_time
+--    FROM timetable) AS t
+--ON re.timetable_id = t.id;
+
+--ALTER TABLE reservation
+--ADD date DATE;
+
+--ALTER TABLE reservation
+--MODIFY COLUMN start_time VARCHAR(20);
