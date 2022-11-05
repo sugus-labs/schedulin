@@ -1,9 +1,9 @@
 from sqlalchemy import create_engine
 
-user = "automato"
+user = "schedulin"
 passw = "MySQLIsFun"
-host = "automato.mysql.pythonanywhere-services.com"
-database = "automato$schedulin"
+host = "35.231.228.133"
+database = "schedulin"
 
 db = create_engine(
     'mysql+pymysql://{0}:{1}@{2}/{3}' \
