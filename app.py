@@ -1,15 +1,13 @@
-# A very simple Flask Hello World app for you to get started with...
-
 from flask import Flask, jsonify
 from sqlalchemy import create_engine
 from datetime import datetime
 from flask_restx import Api, Namespace, Resource, \
     reqparse, inputs, fields
 
-user = "automato"
+user = "schedulin"
 passw = "MySQLIsFun"
-host = "automato.mysql.pythonanywhere-services.com"
-database = "automato$schedulin"
+host = "35.231.228.133"
+database = "schedulin"
 
 app = Flask(__name__)
 
